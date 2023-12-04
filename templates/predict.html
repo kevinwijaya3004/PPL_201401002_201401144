@@ -1,0 +1,154 @@
+{% extends 'layout.html' %}
+
+{% block title %}Diabet Care{% endblock %}
+
+{% block content %}
+<section class="section-padding" id="try">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-12 mx-auto">
+				<div class="try-form">
+					<h2 class="text-center mb-lg-3 mb-2">Try Diabet Care</h2><br>
+
+					<div class="text-center">
+						{% if result == False %}
+							<p>
+								<b>Selamat, Anda tidak terkena diabetes :D</b>
+							</p>
+							<div class="col-lg-3 col-md-4 col-6 mx-auto">
+								<a href="predict" class="form-control" id="submit-button">Coba Lagi</a>
+							</div>
+						{% endif %}
+						{% if result == True %}
+							<p>
+								<b>Anda mungkin terkena diabetes! Segera periksa diri Anda ke dokter.</b>
+							</p>
+							<div class="col-lg-3 col-md-4 col-6 mx-auto">
+								<a href="predict" class="form-control" id="submit-button">Coba Lagi</a>
+							</div>
+						{% endif %}
+					</div><br>
+
+					<form role="form" action="/result" method="POST">
+						<div class="row">
+							<div class="col-lg-6 col-12">
+								<input type="number" name="age" id="age" class="form-control" placeholder="Usia" required>
+							</div>
+
+							<div class="col-lg-6 col-12">
+								<select name="gender" id="gender" class="form-control" placeholder="Jenis Kelamin" required>
+									<option value="" selected disabled hidden>Pilih</option>
+									<option value="Male">Laki-laki</option>
+									<option value="Female">Perempuan</option>
+								</select>
+							</div>
+
+							<div class="col-lg-6 col-12">
+								<div class="form-check form-switch form-control">
+									<input class="form-check-input" type="checkbox" value="1" role="switch" name="polyuria" id="polyuria">
+									<label class="form-check-label" for="polyuria">Sering Buang Air Kecil (Poliuria)</label><br>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-12">
+								<div class="form-check form-switch form-control">
+									<input class="form-check-input" type="checkbox" value="1" role="switch" name="polydipsia" id="polydipsia">
+									<label class="form-check-label" for="polydipsia">Sering haus (Polidipsia)</label><br>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-12">
+								<div class="form-check form-switch form-control">
+									<input class="form-check-input" type="checkbox" value="1" role="switch" name="sudden_weight_loss" id="sudden_weight_loss">
+									<label class="form-check-label" for="sudden_weight_loss">Berat badan turun</label><br>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-12">
+								<div class="form-check form-switch form-control">
+									<input class="form-check-input" type="checkbox" value="1" role="switch" name="weakness" id="weakness">
+									<label class="form-check-label" for="weakness">Lelah berlebihan</label><br>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-12">
+								<div class="form-check form-switch form-control">
+									<input class="form-check-input" type="checkbox" value="1" role="switch" name="polyphagia" id="polyphagia">
+									<label class="form-check-label" for="polyphagia">Rasa lapar berlebih (Polifagia)</label><br>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-12">
+								<div class="form-check form-switch form-control">
+									<input class="form-check-input" type="checkbox" value="1" role="switch" name="genital_thrush" id="genital_thrush">
+									<label class="form-check-label" for="genital_thrush">Infeksi jamur daerah genital</label><br>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-12">
+								<div class="form-check form-switch form-control">
+									<input class="form-check-input" type="checkbox" value="1" role="switch" name="visual_blurring" id="visual_blurring">
+									<label class="form-check-label" for="visual_blurring">Penglihatan kabur</label><br>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-12">
+								<div class="form-check form-switch form-control">
+									<input class="form-check-input" type="checkbox" value="1" role="switch" name="itching" id="itching">
+									<label class="form-check-label" for="itching">Gatal-gatal</label><br>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-12">
+								<div class="form-check form-switch form-control">
+									<input class="form-check-input" type="checkbox" value="1" role="switch" name="irritability" id="irritability">
+									<label class="form-check-label" for="irritability">Mudah marah</label><br>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-12">
+								<div class="form-check form-switch form-control">
+									<input class="form-check-input" type="checkbox" value="1" role="switch" name="delayed_healing" id="delayed_healing">
+									<label class="form-check-label" for="delayed_healing">Penyembuhan lama jika terluka</label><br>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-12">
+								<div class="form-check form-switch form-control">
+									<input class="form-check-input" type="checkbox" value="1" role="switch" name="partial_paresis" id="partial_paresis">
+									<label class="form-check-label" for="partial_paresis">Otot melemah</label><br>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-12">
+								<div class="form-check form-switch form-control">
+									<input class="form-check-input" type="checkbox" value="1" role="switch" name="muscle_stiffness" id="muscle_stiffness">
+									<label class="form-check-label" for="muscle_stiffness">Otot kaku</label><br>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-12">
+								<div class="form-check form-switch form-control">
+									<input class="form-check-input" type="checkbox" value="1" role="switch" name="alopecia" id="alopecia">
+									<label class="form-check-label" for="alopecia">Rambut sering rontok (Alopecia)</label><br>
+								</div>
+							</div>
+
+							<div class="col-lg-6 col-12">
+								<div class="form-check form-switch form-control">
+									<input class="form-check-input" type="checkbox" value="1" role="switch" name="obesity" id="obesity">
+									<label class="form-check-label" for="obesity">Obesitas</label><br>
+								</div>
+							</div>
+
+							<div class="col-lg-3 col-md-4 col-6 mx-auto">
+								<button type="submit" class="form-control" id="submit-button">Submit</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

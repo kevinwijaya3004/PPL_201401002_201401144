@@ -1,0 +1,239 @@
+{% extends 'layout.html' %}
+
+{% block title %}Diabet Care{% endblock %}
+
+{% block content %}
+<section class="hero" id="hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="../static/images/slider/portrait-successful-mid-adult-doctor-with-crossed-arms.jpg" class="img-fluid" alt="">
+						</div>
+
+						<div class="carousel-item">
+								<img src="../static/images/slider/young-asian-female-dentist-white-coat-posing-clinic-equipment.jpg" class="img-fluid" alt="">
+						</div>
+
+						<div class="carousel-item">
+								<img src="../static/images/slider/doctor-s-hand-holding-stethoscope-closeup.jpg" class="img-fluid" alt="">
+						</div>
+					</div>
+				</div>
+
+				<div class="heroText d-flex flex-column justify-content-center">
+					<h1 class="mt-auto mb-2">
+						Better
+						<div class="animated-info">
+							<span class="animated-item">health</span>
+							<span class="animated-item">days</span>
+							<span class="animated-item">lives</span>
+						</div>
+					</h1>
+
+					<p class="mb-4">Diabet Care adalah sebuah sistem aplikasi berbasis website yang dapat digunakan sebagai pendeteksi penyakit diabetes menggunakan Machine Learning</p>
+
+					<div class="heroLinks d-flex flex-wrap align-items-center">
+						<a class="custom-link me-4" href="#about" data-hover="Learn More">Learn More</a>
+
+						<p class="contact-phone mb-0"><a href="tel:+6282215111643"><i class="bi-phone"></i> 822-1511-1643</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section-padding" id="about">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-12">
+				<h2 class="mb-lg-3 mb-3">Apa itu Diabet Care?</h2>
+
+				<p>Penyakit diabetes adalah masalah kesehatan yang sering terjadi di masyarakat Indonesia. Jutaan orang yang terkena penyakit diabetes khawatir akan komplikasi yang ditimbulkan dari penyakit ini. Menggunakan teknologi Machine Learning, kami dapat memberikan solusi pencegahan awal dalamm mendeteksi penyakit diabetes yang mungkin terjadi pada Anda!</p>
+
+				<p>Kami menggunakan teknologi Machine Learning untuk mengembangkan sistem pendeteksi penyakit diabetes yang handal dan akurat. Berdasarkan data yang dilatih, dapat ditemukan pola-pola yang terkait dengan diabetes sehingga bisa mengidentifikasi faktor risiko serta gejala diabetes.</p>
+			</div>
+
+			<div class="col-lg-4 col-md-5 col-12 mx-auto">
+				<div class="featured-circle bg-white shadow-lg d-flex justify-content-center align-items-center">
+					<p class="featured-text"><span class="featured-number">95</span>%<br>Accuration</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="gallery">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-6 ps-0">
+				<img src="../static/images/gallery/medium-shot-man-getting-vaccine.jpg" class="img-fluid galleryImage" alt="get a vaccine" title="get a vaccine for yourself">
+			</div>
+
+			<div class="col-lg-6 col-6 pe-0">
+				<img src="../static/images/gallery/female-doctor-with-presenting-hand-gesture.jpg" class="img-fluid galleryImage" alt="wear a mask" title="wear a mask to protect yourself">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section-padding pb-0" id="ourworks">
+	<div class="container">
+		<div class="row">
+			<h2 class="text-center mb-lg-5 mb-4">Our Works</h2>
+			
+			<div class="ourworks">
+				<div class="row g-0 justify-content-end justify-content-md-around align-items-start ourworks-nodes">
+					<div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 ourworks-content bg-white shadow-lg">
+						<h3 class=" text-light">Dataset Exploration</h3>
+						<p>Setelah perumusan masalah ditemukan, kami melakukan tahap pencarian dataset penyakit diabetes. Kami menggunakan dataset publik dari <a href="https://www.kaggle.com/datasets/andrewmvd/early-diabetes-classification" target="_blank">Kaggle</a>.</p>
+					</div>
+
+					<div class="col-3 col-sm-1 order-2 ourworks-icons text-md-center">
+						<i class="bi-clipboard-data ourworks-icon"></i>
+					</div>
+
+					<div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 ourworks-date">
+						<time>Stage 1</time>
+					</div>
+				</div>
+
+				<div class="row g-0 justify-content-end justify-content-md-around align-items-start ourworks-nodes my-lg-5 my-4">
+					<div class="col-9 col-md-5 ms-md-4 ms-lg-0 order-3 order-md-1 ourworks-content bg-white shadow-lg">
+						<h3 class=" text-light">Data Preprocessing</h3>
+						<p>Kemudian kami melakukan tahap pra-pemrosesan data yang meliputi mengecekan data yang kosong, mengubah data kategorikal menjadi numerik, dan melakukan train-test-split.</p>
+					</div>
+
+					<div class="col-3 col-sm-1 order-2 ourworks-icons text-md-center">
+						<i class="bi-arrow-repeat ourworks-icon"></i>
+					</div>
+
+					<div class="col-9 col-md-5 pe-md-3 pe-lg-0 order-1 order-md-3 py-4 ourworks-date">
+						<time>Stage 2</time>
+					</div>
+				</div>
+
+				<div class="row g-0 justify-content-end justify-content-md-around align-items-start ourworks-nodes">
+					<div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 ourworks-content bg-white shadow-lg">
+						<h3 class=" text-light">Model Development</h3>
+						<p>Selanjutnya kami mengembangkan model machine learning dengan arsitektur model sebuah input layer, 3 dense layer, 2 dropout layer, dan 1 output layer.</p>
+
+						<p>Model machine learning kami menggunakan optimizer Adam, binary crossentropy loss function, dan metrik akurasi. Hasil evaluasi akuasi model mencapai 94.23%.</p>
+					</div>
+
+					<div class="col-3 col-sm-1 order-2 ourworks-icons text-md-center">
+						<i class="bi-cpu ourworks-icon"></i>
+					</div>
+
+					<div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 ourworks-date">
+						<time>Stage 3</time>
+					</div>
+				</div>
+
+				<div class="row g-0 justify-content-end justify-content-md-around align-items-start ourworks-nodes my-lg-5 my-4">
+					<div class="col-9 col-md-5 ms-md-4 ms-lg-0 order-3 order-md-1 ourworks-content bg-white shadow-lg">
+						<h3 class=" text-light">Model Deployment</h3>
+						<p class="mb-0 pb-0">Setelah model machine learning optimal, kami lanjut ke tahap deployment model ke dalam aplikasi website ini agar dapat terintegrasi dan digunakan masyarakat luas.</p><br>
+					</div>
+
+					<div class="col-3 col-sm-1 order-2 ourworks-icons text-md-center">
+						<i class="bi-box ourworks-icon"></i>
+					</div>
+
+					<div class="col-9 col-md-5 pe-md-3 pe-lg-0 order-1 order-md-3 py-4 ourworks-date">
+						<time>Stage 4</time>
+					</div>
+				</div>
+
+				<div class="row g-0 justify-content-end justify-content-md-around align-items-start ourworks-nodes">
+					<div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 ourworks-content bg-white shadow-lg">
+						<h3 class=" text-light">Application Tesing</h3>
+						<p>Melakukan pengujian aplikasi website dan pengembangan serta pemeliharaan sistem lebih lanjut.</p>
+					</div>
+
+					<div class="col-3 col-sm-1 order-2 ourworks-icons text-md-center">
+						<i class="bi-check-all ourworks-icon"></i>
+					</div>
+
+					<div class="col-9 col-md-5 ps-md-3 ps-lg-0 order-1 order-md-3 py-4 ourworks-date">
+						<time>Stage 5</time>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section-padding pb-0" id="teams">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="text-center mb-lg-5 mb-4">Our Team</h2>
+
+				<div class="owl-carousel teams-carousel">
+					<figure class="teams-thumb d-flex flex-wrap align-items-center rounded">
+						<div class="teams-stars">
+							<i class="bi-star-fill"></i>
+							<i class="bi-star-fill"></i>
+							<i class="bi-star-fill"></i>
+							<i class="bi-star-fill"></i>
+							<i class="bi-star-fill"></i>
+						</div>
+
+						<p class="text-primary d-block mt-2 mb-0 w-100"><strong>General Manager</strong></p>
+
+						<p class="teams-text w-100">Mahasiswa S1 Ilmu Komputer 2020, Fakultas Ilmu Komputer dan Teknologi Informasi, Universitas Sumatera Utara.</p>
+
+						<img src="../static/images/teams/kevin.jpg" class="img-fluid teams-image" alt="">
+
+						<figcaption class="ms-4">
+							<strong>Kevin Wijaya</strong>
+						</figcaption>
+					</figure>
+
+					<figure class="teams-thumb d-flex flex-wrap align-items-center rounded">
+						<div class="teams-stars">
+							<i class="bi-star-fill"></i>
+							<i class="bi-star-fill"></i>
+							<i class="bi-star-fill"></i>
+							<i class="bi-star-fill"></i>
+							<i class="bi-star-fill"></i>
+						</div>
+
+						<p class="text-primary d-block mt-2 mb-0 w-100"><strong>Machine Learning Engineer</strong></p>
+
+						<p class="teams-text w-100">Mahasiswa S1 Ilmu Komputer 2020, Fakultas Ilmu Komputer dan Teknologi Informasi, Universitas Sumatera Utara.</p>
+
+						<img src="../static/images/teams/amru.jpg" class="img-fluid teams-image" alt="">
+
+						<figcaption class="ms-4">
+							<strong>Amru Khair Al Hakim</strong>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section-padding" id="try">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-12 mx-auto">
+				<div class="try-form">
+					<h2 class="text-center mb-lg-3 mb-2">Try Diabet Care</h2>
+
+					<p style="text-align: justify;">Coba deteksi penyakit diabetes Anda sekarang juga dengan sistem yang didukung oleh teknologi machine learning kami! Anda hanya perlu memasukkan usia, jenis kelamin, dan gejala-gejala penyakit diabetes Anda seperti sering buang air kecil, sering haus, penurunan berat badan, rasa lapar yang berlebihan, otot kaku, obesitas, dan lain-lain.</p>
+					
+					<div class="col-lg-3 col-md-4 col-6 mx-auto" style="text-align: center;">
+						<a href="predict" class="form-control" id="submit-button">Try Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

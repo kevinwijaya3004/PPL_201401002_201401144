@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		{% include 'meta.html' %}
+
+    <title>{% block title %}{% endblock %}</title>
+
+		<!-- CSS FILES -->        
+		{% include 'styles.html' %}
+
+		<style>
+			/* Chrome, Safari, Edge, Opera */
+			input::-webkit-outer-spin-button,
+			input::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+			
+			/* Firefox */
+			input[type=number] {
+				-moz-appearance: textfield;
+			}
+		</style>
+	</head>
+  
+	<body id="top">
+		<main>
+			{% include 'header.html' %}
+
+			{% block content %}{% endblock %}
+		</main>
+
+		<!-- FOOTER -->
+	  {% include 'footer.html' %}
+
+		<!-- JAVASCRIPT FILES -->
+	  {% include 'scripts.html' %}
+	</body>
+</html>
